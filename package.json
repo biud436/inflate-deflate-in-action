@@ -1,0 +1,13 @@
+{
+  "name": "inflate-deflate-in-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "biud436 <biud436@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  },
+  "scripts": {
+    "start": "http-server -p 8080"
+  }
+}
