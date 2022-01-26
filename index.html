@@ -17,20 +17,28 @@
   </head>
   <body class="bg-[#1E1E1E] text-[#CCCCCC]">
     <div class="container-lg p-4">
+      <nav
+        class="bg-[#3C3C3C] w-full h-12 flex justify-center items-center text-3xl"
+      >
+        <p class="text-white">텍스트 압축기</p>
+      </nav>
       <article class="flex pt-2 w-full h-12">
         <div class="flex-1 leading-9 w-full">
           <div
-            class="leading-9 w-full border rounded flex justify-start mb-2 p-2"
+            class="leading-9 w-full border rounded flex flex-col justify-start mb-2 p-2"
           >
             <!-- <label class="pr-4 text-gray-400 font-bold"> 입력 : </label> -->
             <textarea
               id="normal-text"
               class="flex-1 input border rounded border-gray-400 text-black"
-            ></textarea>
+              rows="10"
+            >
+Feugait nulla voluptua commodo sed et consetetur aliquam labore vero. Diam eos consectetuer sit vero erat hendrerit vero kasd dolor et et et. Takimata vulputate feugait magna possim eos amet amet nulla voluptua. Justo ut duis. Ut no magna duo ipsum minim sea magna amet nonummy dolore. Ipsum doming lorem kasd erat aliquyam eos tempor dolore adipiscing eirmod consetetur sit et doming. Takimata ipsum est sadipscing in ea rebum sadipscing quod no laoreet stet lorem sed. Duo ea id elitr est diam ea ipsum nonumy clita nostrud gubergren magna possim amet duo enim et aliquyam. Amet et adipiscing lobortis tempor dolore stet dolores rebum facilisis consetetur eirmod molestie ut justo erat. Kasd lorem accusam elitr duis et magna dolor vero. Et delenit duis est dolor justo lorem sea elitr ipsum. Et lobortis sed dolore eirmod vel molestie labore iusto diam qui et sed accusam dolor diam lorem labore.</textarea
+            >
 
             <button
               id="compress-btn"
-              class="rounded border text-white bg-neutral-600 w-24 hover:bg-blue-600 active:bg-yellow-600"
+              class="rounded border text-white bg-neutral-600 w-full h-12 hover:bg-blue-600 active:bg-yellow-600"
             >
               압축
             </button>
@@ -46,6 +54,12 @@
               deflate 후의 텍스트 (길이 : <span>0</span>)
             </h3>
             <p id="after-text"></p>
+          </div>
+          <div class="p-2 rounded border-b-3 border">
+            <h3 class="font-bold text-blue-100 text-2xl">
+              압축률 <span class="m-2">0</span>%
+            </h3>
+            <p id="success-text"></p>
           </div>
         </div>
       </article>

@@ -1,3 +1,7 @@
+const runtime = {
+  prevText: 0,
+  afterText: 0,
+};
 const entry = {
   start() {
     const text = String(document.querySelector("#normal-text").value);
@@ -9,6 +13,7 @@ const entry = {
     this.clear();
     this.updatePrevText(text);
     this.updateAfterText(compressedZip);
+    this.updateSuccessText();
   },
 
   clear() {
@@ -33,6 +38,7 @@ const entry = {
     let detail = prevText.previousElementSibling.firstElementChild;
     detail.textContent = userRaw.length;
     detail.style.color = "#ff0000";
+    runtime.prevText = userRaw.length;
   },
 
   /**
@@ -41,13 +47,22 @@ const entry = {
   updateAfterText(compressedZip) {
     const afterText = document.querySelector("#after-text");
     afterText.textContent = compressedZip;
-    detail = afterText.previousElementSibling.firstElementChild;
+    let detail = afterText.previousElementSibling.firstElementChild;
     detail.textContent = compressedZip.length;
     detail.style.color = "#ff0000";
+    runtime.afterText = compressedZip.length;
   },
 
-  updateFrame() {
-    window.requestAnimationFrame(updateFrame);
+  updateSuccessText() {
+    const successText = document.querySelector("#success-text");
+    const percent = (
+      (parseInt(runtime.afterText) / parseInt(runtime.prevText)) *
+      100
+    ).toFixed(2);
+    // successText.textContent = percent;
+    let detail = successText.previousElementSibling.firstElementChild;
+    detail.textContent = percent;
+    detail.style.color = "#ff0000";
   },
 };
 
