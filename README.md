@@ -6,9 +6,16 @@ This project allows you to start the web server and test compress and decompress
 
 ## Installation and Start
 
+To install the project, you need to run the following command:
+
 ```bash
 git clone https://github.com/biud436/inflate-deflate-in-action.git
 cd inflate-deflate-in-action
 yarn install
+```
+
+to start the web server, you should run the following command:
+
+```bash
 yarn start
 ```
