@@ -1,0 +1,7 @@
+:root {
+  --main-font-family: "Noto Serif KR", serif;
+}
+
+* {
+  font-family: var(--main-font-family);
+}

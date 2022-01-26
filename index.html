@@ -6,12 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
     <title>Deflate and Inflate 테스트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <h3>압축되기 전의 텍스트 (길이 : <span>0</span>)</h3>
-    <pre id="prev-text"></pre>
-    <h3>deflate 후의 텍스트 (길이 : <span>0</span>)</h3>
-    <p id="after-text"></p>
+  <body class="bg-[#1E1E1E] text-[#CCCCCC]">
+    <div class="container-lg p-4">
+      <article class="flex pt-2 w-full h-12">
+        <div class="flex-1 leading-9 w-full">
+          <div
+            class="leading-9 w-full border rounded flex justify-start mb-2 p-2"
+          >
+            <!-- <label class="pr-4 text-gray-400 font-bold"> 입력 : </label> -->
+            <textarea
+              id="normal-text"
+              class="flex-1 input border rounded border-gray-400 text-black"
+            ></textarea>
+
+            <button
+              id="compress-btn"
+              class="rounded border text-white bg-neutral-600 w-24 hover:bg-blue-600 active:bg-yellow-600"
+            >
+              압축
+            </button>
+          </div>
+          <div class="mb-4 p-2 rounded border-b-3 border">
+            <h3 class="font-bold text-2xl">
+              압축되기 전의 텍스트 (길이 : <span>0</span>)
+            </h3>
+            <p id="prev-text"></p>
+          </div>
+          <div class="p-2 rounded border-b-3 border">
+            <h3 class="font-bold text-2xl">
+              deflate 후의 텍스트 (길이 : <span>0</span>)
+            </h3>
+            <p id="after-text"></p>
+          </div>
+        </div>
+      </article>
+    </div>
     <script src="js/index.js"></script>
   </body>
 </html>
