@@ -1,6 +1,6 @@
 const entry = {
   start() {
-    const text = document.querySelector("#normal-text").innerHTML;
+    const text = String(document.querySelector("#normal-text").value);
     const zip = pako.deflate(text, { to: "string", level: 1 });
     let compressedZip = "";
     for (let i = 0; i < zip.byteLength; i++) {
